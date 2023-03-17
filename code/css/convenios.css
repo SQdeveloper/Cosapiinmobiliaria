@@ -1,0 +1,373 @@
+/********** General ************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/*********** Header **************/
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    background-color: white;
+    align-items: center;
+    height: 60px;
+    border-bottom: rgb(214, 214, 214);
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    transition: background-color .4s;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.122);
+}
+
+header .left {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+header hr {
+    border: 1px solid #0067a4;
+    height: 35px;
+    transition: border .4s;
+}
+
+header ul {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    transition: color .4s;
+    color: #0067a4;
+}
+
+header .logo {
+    width: 120px;
+    filter: invert(100%);
+}
+
+header .left > a {
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: max-content;
+    transition: all .4s;
+    background-color: #0067a4;
+}
+
+header .left > a:hover {
+    background-color: white;
+    color: rgb(26, 77, 241);
+}
+
+header > button {
+    display: none;
+    background-color: transparent;
+}
+
+header > button img {
+    width: 30px;
+}
+
+/******** Menu ********/
+.menu {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.menu.active {
+    display: flex;
+}
+
+.menu > img {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 35px;
+}
+
+.menu a {
+    color: #0067a4;
+}
+
+.menu h2 {
+    font-size:  40px;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+/******* First ********/
+.first {
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+    width: 60%;
+}
+
+.first h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+/********* Second ***********/
+.second {
+    display: flex;
+    gap: 30px;
+    width: 80%;
+    margin: 60px auto;
+    align-items: center;
+}
+
+.second p {
+    margin: 15px 0;
+    line-height: 30px;
+}
+
+.second a {
+    display: block;
+    width: fit-content;
+    border: 1px solid gray;
+    color: gray;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+
+.second img {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/********* Third ***********/
+.third {
+    display: flex;
+    gap: 30px;
+    width: 80%;
+    margin: 60px auto;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.third p {
+    margin: 15px 0;
+    line-height: 30px;
+}
+
+.third a {
+    display: block;
+    width: fit-content;
+    border: 1px solid gray;
+    color: gray;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+
+.third img {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/********* Footer ***********/
+footer {
+    width: 100%;
+    background-color: #0067a4;
+    padding: 40px 80px;
+    padding-bottom: 0;
+    color: white;
+}
+footer .top {
+    display: flex;
+    position: relative;
+}
+
+footer .top img {
+    width: 110px;
+}
+
+footer .top hr {
+    border: 1px solid white;
+}
+
+footer .top > div {
+    padding: 5px 15px;
+    width: 250px;
+}
+
+footer .top h3 {
+    margin-bottom: 20px;
+}
+
+footer .redes {
+    position: absolute;
+    right: 0;
+}
+
+footer .redes img {
+    filter: invert(100%);
+    margin-right: 10px;
+    width: 30px;
+}
+
+footer .foot {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0 15px;
+    color: rgb(231, 230, 230);
+}
+
+/********** Querys ***********/
+@media (max-width: 1300px) {
+    /********** Header **********/
+    header > button {
+        display: block;
+    }
+
+    header .left {
+        display: none;
+    }
+}
+
+@media (max-width: 1100px) {
+    /********* Footer **********/
+    footer .top {
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 40px;
+    }
+
+    footer .redes {
+        position: relative;
+    }
+}
+
+@media (max-width: 1000px) {
+    /********** Second ***********/
+    .second {
+        width: 90%;
+    }
+
+    /********** Third ***********/
+    .third {
+        width: 90%;
+    }
+}
+
+@media (max-width: 850px) {
+    /********* Header *********/
+    header {
+        padding: 0 10px;
+    }
+
+    /******* First ********/
+    .first {
+        width: 90%;
+    }
+
+    /********** Second ***********/
+    .second {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .second a {
+        margin: 0 auto;
+    }
+
+    .second img {
+        width: 500px;
+    }
+
+    /********** Third ***********/
+    .third {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .third a {
+        margin: 0 auto;
+    }
+
+    .third img {
+        width: 500px;
+    }
+
+    /********* Footer ***********/
+    footer .foot {
+        flex-direction: column;
+        text-align: center;
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 670px) {
+    /********* Footer *********/
+    footer {
+        padding: 40px 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    /********** Second ***********/
+    .second img {
+        width: 100%;
+    }
+    
+    /********** Third ***********/
+    .third img {
+        width: 100%;
+    }
+
+    /************* Footer ****************/
+    footer .top {
+        justify-content: center;
+    }
+
+    footer .top > div {
+        width: 100%;
+        text-align: center;
+    }
+
+    footer hr {
+        display: none;
+    }
+}
